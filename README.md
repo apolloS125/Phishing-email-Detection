@@ -5,17 +5,17 @@ This API analyzes email content to detect signs of social engineering or phishin
 
 This project is part of the 241-202 Machine Learning II.
 
-## 🌍 Base URL
+## Base URL
 ```
 http://<host>:5001
 ```
 
 ---
 
-## 📌 Endpoints
+## Endpoints
 
-### 🏠 1. Home Page
-**📍 Endpoint:**
+### 1. Home Page
+**Endpoint:**
 ```
 GET /
 ```
@@ -27,35 +27,35 @@ GET /
 
 ---
 
-### 📊 2. Dashboard
-**📍 Endpoint:**
+### 2. Dashboard
+**Endpoint:**
 ```
 GET /dashboard
 ```
-**📝 Description:**
+**Description:**
 - Displays an interactive dashboard with email classification statistics.
 
-**📤 Response:**
+**Response:**
 - HTML page containing JSON-based statistical data.
 
 ---
 
-### 🔍 3. Predict Email Classification
-**📍 Endpoint:**
+### 3. Predict Email Classification
+**Endpoint:**
 ```
 POST /predict
 ```
-**📝 Description:**
+**Description:**
 - Analyzes email content and predicts if it contains phishing indicators.
 
-**📥 Request Body:**
+**Request Body:**
 ```json
 {
   "email_text": "<email content>"
 }
 ```
 
-**📤 Response:**
+**Response:**
 ```json
 {
   "original_text": "<original email content>",
@@ -74,7 +74,7 @@ POST /predict
 
 ---
 
-## 🔄 Processing Workflow
+## Processing Workflow
 1. Detects the language of the email text.
 2. Translates content into English if necessary.
 3. Cleans the text by removing stopwords and special characters.
@@ -85,7 +85,7 @@ POST /predict
 
 ---
 
-## 📦 Required Dependencies
+## Required Dependencies
 - `FastAPI` (API framework)
 - `pydantic` (data validation)
 - `tensorflow` (deep learning model)
@@ -99,7 +99,7 @@ POST /predict
 
 ---
 
-## 🔧 Installation Guide
+## Installation Guide
 ```bash
 # Clone the repository
 git clone https://github.com/apolloS125/phishing-email-detector.git
@@ -118,7 +118,7 @@ pip show scikit-learn
 
 ---
 
-## 📂 Project Directory Structure
+## Project Directory Structure
 ```
 phishing-email-detector/
 ├── main.py                    # FastAPI main application
@@ -135,7 +135,7 @@ phishing-email-detector/
 
 ---
 
-## 🚀 Running the API Server
+## Running the API Server
 ```sh
 uvicorn main:app --host 0.0.0.0 --port 5001 --reload
 ```
